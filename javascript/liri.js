@@ -14,14 +14,14 @@ if (process.argv[2] === "spotify-this-song") {
         function (response) {
             let movie = process.argv[3]
             if(process.argv[2]==="movie-this"){
-                console.log(response.title)
-                console.log(response.year)
-                console.log(response.rating[0])
-                console.log(response.rating[1])
-                console.log(response.country)
-                console.log(response.language)
-                console.log(response.plot)
-                console.log(response.actors)
+                console.log("The movie title is " + response.title)
+                console.log("The year the movie came out is " + response.year)
+                console.log("The IMDB rating is " + response.rating[0])
+                console.log("The rotten tomatos rating is " +response.rating[1])
+                console.log("This movie was filmed in " + response.country)
+                console.log("This movie is in " +response.language)
+                console.log("The poot of the movie: " + response.plot)
+                console.log("The actors in the movie " + response.actors)
             }
         })
 
@@ -29,9 +29,9 @@ if (process.argv[2] === "spotify-this-song") {
         function (response) {
             let artist = process.argv[3]
             if (process.argv[2]==="concert-this"){
-            console.log(response.venue.name)
-            console.log(response.venue.city)
-            console.log(response.datetime)
+            console.log("The venue name is: " + response.venue.name)
+            console.log("The venue location is: " + response.venue.city)
+            console.log("The concert takes place on: " + response.datetime)
             }
         }
     )
